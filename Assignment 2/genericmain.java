@@ -49,7 +49,7 @@ for (int i = index; i <size-1; i++) {
     }
 size--;
 }
-    public static void main(String[] args) {
+   public static void main(String[] args) {
 
         genericclass<Integer> a = new genericclass<>(3);
 a.addelement(0,10 );
