@@ -52,7 +52,7 @@ System.out.println("null");
     }
 
 }
-public void delete(){
+public void deletefirst(){
     if(head==null){
         System.out.println("list is empty");
         return;
@@ -61,6 +61,21 @@ public void delete(){
         size--;
     }
 }
+public void deletelast(){
+    if(head==null){
+        System.out.println("list is empty");
+        return;
+    }else{
+        Node temp=head;
+        Node nextnode=temp.next;
+        while(nextnode.next!=null){
+            temp=nextnode;
+            nextnode=nextnode.next;
+        }
+temp.next=null;
+    }
+}
+
 
 public static void main(String[] args) {
     singlylinkedlist<String> list=new singlylinkedlist<>();
@@ -74,9 +89,11 @@ public static void main(String[] args) {
     
 
 
-list.delete();
+list.deletefirst();
  list.display();
 
+ list.deletelast();
+ list.display();
 
 }
 
